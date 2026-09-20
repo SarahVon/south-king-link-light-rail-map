@@ -5,7 +5,9 @@ A historical ArcGIS Pro map of Link light rail stations and rail-segment status 
 ## Contents
 
 - [Purpose and questions](#purpose-and-questions)
-- [Data and source boundary](#data-and-source-boundary)
+- [Data availability and source data](#data-availability-and-source-data)
+- [Layers used](#layers-used)
+- [Source links and attribution](#source-links-and-attribution)
 - [Workflow and design](#workflow-and-design)
 - [Map](#map)
 - [Interpretation](#interpretation)
@@ -17,9 +19,25 @@ A historical ArcGIS Pro map of Link light rail stations and rail-segment status 
 
 The map asks: **Which stations and rail segments in the selected South King corridor were mapped as in service or under construction on January 31, 2025, and how can that status be read quickly in one layout?**
 
-## Data and source boundary
+## Data availability and source data
 
-The source layers came from the Sound Transit Open Transit Data portal: `LINKLine` for rail alignments and status, `LINKStations` for station locations and status, and `STSubareas` for geographic context. The repository contains the exported map, not the source geodatabase or ArcGIS project. Status is a historical attribute snapshot, not a live construction or service feed.
+The source layers came from the Sound Transit Open Transit Data portal. The repository contains the exported map, not the source geodatabase or ArcGIS project. Source files are not bundled because Sound Transit agency data carries attribution/disclaimer requirements, and some available layers are explicitly unpublished. Obtain an authorized copy from Sound Transit's official portal or another authorized distribution, and check the current terms and metadata before downloading, sharing, or reusing it. Status is a historical attribute snapshot, not a live construction or service feed.
+
+## Layers used
+
+The map uses these source layers:
+
+- `LINKLine` — rail alignments and status
+- `LINKStations` — station locations and status
+- `STSubareas` — geographic context
+
+No `SNDR*`, `STExpress`, `STExpStops`, or `STDistrict` files are used or included.
+
+The map's historical context is **January 31, 2025**. Source metadata reports a different extract date, so that extract date and the map date must not be treated as interchangeable; consult the authorized source metadata when an exact historical record is required.
+
+## Source links and attribution
+
+The current README identifies the [Sound Transit Open Transit Data portal](https://www.soundtransit.org/) as the source. Use Sound Transit's official portal to obtain the layers and review its attribution, disclaimer, publication status, and licensing terms. This portfolio map is not an official Sound Transit publication.
 
 ## Workflow and design
 
@@ -44,7 +62,7 @@ This is a historical map, not a Sound Transit publication or current service gui
 
 ## Reproducibility and attribution
 
-Recreate the map in ArcGIS Pro by obtaining the cited Sound Transit layers, filtering the corridor and status fields, applying the documented colors, composing the layout elements, and exporting the image. Exact regeneration is bounded because the source data, project file, and extraction metadata are not included. Basemap and map credits appear on the exported layout. Check current portal terms and dataset metadata before reuse.
+The committed map is a derived output, not a bundled copy of the source data. Recreate it in ArcGIS Pro by obtaining an authorized copy of the cited Sound Transit layers, filtering the corridor and status fields, applying the documented colors, composing the layout elements, and exporting the image. Exact regeneration cannot be completed from this repository alone until source-data permissions and provenance are confirmed; the source data, project file, and extraction metadata are not included. Basemap and map credits appear on the exported layout. Check current portal terms and dataset metadata before reuse.
 
 ## Repository contents
 
