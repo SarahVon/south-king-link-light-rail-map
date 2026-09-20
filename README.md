@@ -21,7 +21,7 @@ The map asks: **Which stations and rail segments in the selected South King corr
 
 ## Data availability and source data
 
-The source layers came from the Sound Transit Open Transit Data portal. The repository contains the exported map, not the source geodatabase or ArcGIS project. Source files are not bundled because Sound Transit agency data carries attribution/disclaimer requirements, and some available layers are explicitly unpublished. Obtain an authorized copy from Sound Transit's official portal or another authorized distribution, and check the current terms and metadata before downloading, sharing, or reusing it. Status is a historical attribute snapshot, not a live construction or service feed.
+I used source layers from the Sound Transit Open Transit Data portal. The exported map is included, but the source geodatabase and ArcGIS project are not. Source files are not bundled because Sound Transit agency data carries attribution/disclaimer requirements, and some available layers are explicitly unpublished. Obtain an authorized copy from Sound Transit's official portal or another authorized distribution, and check the current terms and metadata before downloading, sharing, or reusing it. Status is a historical attribute snapshot, not a live construction or service feed.
 
 ## Layers used
 
@@ -37,7 +37,7 @@ The map's historical context is **January 31, 2025**. Source metadata reports a 
 
 ## Source links and attribution
 
-The current README identifies the [Sound Transit Open Transit Data portal](https://www.soundtransit.org/) as the source. Use Sound Transit's official portal to obtain the layers and review its attribution, disclaimer, publication status, and licensing terms. This portfolio map is not an official Sound Transit publication.
+I used the [Sound Transit Open Transit Data portal](https://www.soundtransit.org/) as the source. Use Sound Transit's official portal to obtain the layers and review its attribution, disclaimer, publication status, and licensing terms. This map is not an official Sound Transit publication.
 
 ## Workflow and design
 
@@ -62,7 +62,7 @@ This is a historical map, not a Sound Transit publication or current service gui
 
 ## Reproducibility and attribution
 
-The committed map is a derived output, not a bundled copy of the source data. Recreate it in ArcGIS Pro by obtaining an authorized copy of the cited Sound Transit layers, filtering the corridor and status fields, applying the documented colors, composing the layout elements, and exporting the image. Exact regeneration cannot be completed from this repository alone until source-data permissions and provenance are confirmed; the source data, project file, and extraction metadata are not included. Basemap and map credits appear on the exported layout. Check current portal terms and dataset metadata before reuse.
+The map is a derived output, not a bundled copy of the source data. Recreate it in ArcGIS Pro by obtaining an authorized copy of the cited Sound Transit layers, filtering the corridor and status fields, applying the documented colors, composing the layout elements, and exporting the image. Exact regeneration requires confirmed source-data permissions and provenance; the source data, project file, and extraction metadata are not included. Basemap and map credits appear on the exported layout. Check current portal terms and dataset metadata before reuse.
 
 ## Repository contents
 
