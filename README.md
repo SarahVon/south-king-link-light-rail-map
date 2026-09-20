@@ -13,6 +13,12 @@ A historical ArcGIS Pro map of Link light rail stations and rail-segment status 
 
 - `map.jpg` — exported final map.
 
+## Visualization
+
+![South King Link light rail corridor map](map.jpg)
+
+*Historical corridor map showing station and rail-segment status as of January 31, 2025.*
+
 ## Limitations
 
 This is an academic visualization and historical snapshot, not a Sound Transit publication or current service guide. Statuses reflect the source data and stated date; verify current Sound Transit information before using the map for travel or project decisions. The selected corridor simplifies the regional network, and subarea boundaries are contextual rather than a measure of service coverage. Station names and labels should be checked against the original dataset records if an authoritative historical record is required.
