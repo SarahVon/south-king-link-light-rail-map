@@ -1,36 +1,96 @@
-# South King Link Light Rail Corridor Map
+# South King County Link Light Rail Service and Construction Status
 
-A historical ArcGIS Pro map of Link light rail stations and rail-segment status from Tukwila International Boulevard Station to Federal Way Downtown Station, using data dated **January 31, 2025**.
+This ArcGIS Pro project maps the service and construction status of Link light rail stations and rail segments between Tukwila International Boulevard and Federal Way Downtown. The map provides a focused view of the South King County corridor as it was represented on **January 31, 2025**, distinguishing infrastructure already in service from the Federal Way Link Extension then under construction.
 
-## Purpose
+I created the project to practice selecting relevant public data, narrowing a regional dataset to a specific study area, applying status-based symbology, and designing a map that communicates transit expansion clearly.
 
-I created this map to compare the mapped in-service and under-construction status of stations and rail segments in the selected South King corridor in one readable layout.
+## Project goals
 
-## Data and attribution
+- Show the location and status of Link stations in the selected South King County corridor.
+- Distinguish rail segments that were in service from those under construction.
+- Provide regional context with Sound Transit subarea boundaries.
+- Create a focused, readable layout from a larger regional transit dataset.
 
-The map uses `LINKLine`, `LINKStations`, and `STSubareas` from the [Sound Transit Open Transit Data portal](https://www.soundtransit.org/). The source geodatabase and ArcGIS project are not included. Obtain authorized layers from the official portal and review current attribution, disclaimer, publication-status, and licensing terms before reuse.
+## Final map
 
-The map date is January 31, 2025. Source metadata reports a different extract date; these dates are not interchangeable. This map is not an official Sound Transit publication or a live service/construction feed.
+![South King County Link light rail service and construction status as of January 2025](map.jpg)
 
-## Workflow and design
+*Historical map of Link light rail service and construction status from Tukwila International Boulevard Station to Federal Way Downtown Station as represented on January 31, 2025.*
 
-I selected the Link rail, station, and subarea layers, filtered the display to the South King corridor, and used blue for **In Service** and amber for **Under Construction**. Labels, subarea context, legend, scale bar, north arrow, and source credits complete the layout.
+## Data
 
-![South King Link light rail corridor map](map.jpg)
+The project uses three GIS layers from Sound Transit's **Open Transit Data** program. Sound Transit describes the portal as a source of publicly accessible transit data for the Puget Sound region.
 
-*Historical corridor map showing station and rail-segment status as of January 31, 2025.*
+| Dataset | Geometry | Description | Use in this project |
+| --- | --- | --- | --- |
+| `LINKLine` | Polyline | Existing and under-construction Link light rail alignments | Mapped rail segments by service or construction status |
+| `LINKStations` | Point | Existing and under-construction Link stations | Located and labeled stations by status |
+| `STSubareas` | Polygon | Sound Transit subarea boundaries | Provided geographic context for South King and adjacent subareas |
 
-## Interpretation and limitations
+- [Sound Transit Open Transit Data](https://www.soundtransit.org/help-contacts/business-information/open-transit-data-otd)
+- [Download current GIS data](https://www.soundtransit.org/help-contacts/business-information/open-transit-data-otd/otd-downloads)
+- [Transit Data Terms of Use](https://www.soundtransit.org/help-contacts/business-information/open-transit-data-otd/transit-data-terms-use)
 
-Angle Lake and the stations north of it were shown as in service. Kent Des Moines, Star Lake, Federal Way Downtown, and the southern rail segment were shown as under construction. The map communicates location and mapped status; it does not measure completion, predict opening dates, or evaluate ridership.
+The source files are not redistributed in this repository. Because the portal data can change as projects and service evolve, the official download page is the best source for current files. The map remains a historical representation of the data and project status used for the January 2025 analysis.
 
-Verify current Sound Transit information before travel or project decisions. The selected corridor simplifies the regional network, and subarea boundaries provide context rather than service coverage.
+## Tools and methods
 
-## Reproducibility
+I completed the project in **ArcGIS Pro** using the following techniques:
 
-In ArcGIS Pro, obtain authorized copies of the cited layers, filter the corridor and status fields, apply the documented colors, compose the layout, and export the image. Exact regeneration requires confirmed source permissions and extraction metadata.
+- Layer selection and study-area definition
+- Attribute review and status-based categorization
+- Definition queries and display filtering
+- Graduated visual hierarchy and custom symbology
+- Station labeling and label placement
+- Subarea transparency and contextual mapping
+- Layout composition, legend design, and map export
+
+## Workflow
+
+### 1. Define the study area
+
+The source data covers the broader Sound Transit system, so I limited the map to the Link corridor from Tukwila International Boulevard Station south to Federal Way Downtown Station. Removing unrelated routes and stations kept the analysis focused on the South King County expansion and reduced visual clutter.
+
+### 2. Classify stations and rail segments
+
+I reviewed the status attributes in the station and rail-alignment layers and grouped features into two categories: **In Service** and **Under Construction**. The map uses blue for infrastructure shown as operational and amber for infrastructure shown as under construction.
+
+### 3. Add regional context
+
+I included the Sound Transit subareas as semi-transparent polygons. South King provides the primary geographic context, while nearby subareas help orient the corridor within the regional transit district without overpowering the station and alignment data.
+
+### 4. Design the final layout
+
+I labeled each station and organized the legend by station status, rail-alignment status, and subarea. A title, scale bar, north arrow, source note, and preparation date complete the layout. The final design prioritizes the corridor itself while retaining enough surrounding geography to make the station locations understandable.
+
+## Map interpretation
+
+As represented in the January 2025 source data:
+
+- Tukwila International Boulevard, SeaTac/Airport, and Angle Lake stations were shown as **in service**.
+- Kent Des Moines, Star Lake, and Federal Way Downtown stations were shown as **under construction**.
+- The rail alignment north of Angle Lake was shown as **in service**.
+- The extension from Angle Lake toward Federal Way was shown as **under construction**.
+
+Together, the station and alignment layers show how the operating system connected to the southern extension then being developed. The map is intended to communicate location and categorical project status; it does not measure construction progress, predict opening dates, or evaluate ridership or service performance.
+
+## Limitations
+
+This is a historical map rather than a live transit or construction-status product. Station names, service status, project milestones, and source attributes may have changed since January 31, 2025. Current travel or project decisions should be based on official Sound Transit service information.
+
+The selected extent also simplifies the larger regional system. Subarea boundaries provide administrative and geographic context; they do not represent station service areas or rider catchments.
 
 ## Repository contents
 
-- `map.jpg` — exported map
-- `README.md` — data, design, interpretation, and reuse boundary
+```text
+map.jpg     Final exported map
+README.md   Project overview, data documentation, workflow, and interpretation
+```
+
+The ArcGIS Pro project and source GIS files are not required to view the completed work. To reproduce or update the map, download the current GIS package from Sound Transit, review the applicable terms, and apply the workflow documented above.
+
+## Attribution
+
+Transit data: Sound Transit Open Transit Data. Basemap credits shown on the map include Esri, Washington State Parks GIS, TomTom, Garmin, SafeGraph, EPA, USFWS, King County, and NOAA.
+
+This independent portfolio project is not an official Sound Transit or WSDOT publication.
